@@ -1,0 +1,73 @@
+[2023-08-14 07:47:29] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'food_server' (SQL: insert into `telescope_entries` (`batch_id`, `content`, `created_at`, `family_hash`, `type`, `uuid`) values (99e2ed6c-c7c4-480e-b2d8-7591c88753ce, {"command":"key:generate","exit_code":0,"arguments":{"command":"key:generate"},"options":{"show":false,"force":false,"help":false,"quiet":false,"verbose":false,"version":false,"ansi":null,"no-interaction":false,"env":null},"hostname":"Munazzil"}, 2023-08-14 07:47:29, ?, command, 99e2ed6c-bd75-4a54-872b-77efdd6327d5)) {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'food_server' (SQL: insert into `telescope_entries` (`batch_id`, `content`, `created_at`, `family_hash`, `type`, `uuid`) values (99e2ed6c-c7c4-480e-b2d8-7591c88753ce, {\"command\":\"key:generate\",\"exit_code\":0,\"arguments\":{\"command\":\"key:generate\"},\"options\":{\"show\":false,\"force\":false,\"help\":false,\"quiet\":false,\"verbose\":false,\"version\":false,\"ansi\":null,\"no-interaction\":false,\"env\":null},\"hostname\":\"Munazzil\"}, 2023-08-14 07:47:29, ?, command, 99e2ed6c-bd75-4a54-872b-77efdd6327d5)) at D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:759)
+[stacktrace]
+#0 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(719): Illuminate\\Database\\Connection->runQueryCallback('insert into `te...', Array, Object(Closure))
+#1 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(545): Illuminate\\Database\\Connection->run('insert into `te...', Array, Object(Closure))
+#2 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(497): Illuminate\\Database\\Connection->statement('insert into `te...', Array)
+#3 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3204): Illuminate\\Database\\Connection->insert('insert into `te...', Array)
+#4 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(148): Illuminate\\Database\\Query\\Builder->insert(Array)
+#5 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Collections\\Traits\\EnumeratesValues.php(262): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Illuminate\\Support\\Collection), 0)
+#6 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(149): Illuminate\\Support\\Collection->each(Object(Closure))
+#7 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Telescope.php(663): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->store(Object(Illuminate\\Support\\Collection))
+#8 [internal function]: Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#9 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Telescope.php(284): call_user_func(Object(Closure))
+#10 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Telescope.php(674): Laravel\\Telescope\\Telescope::withoutRecording(Object(Closure))
+#11 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\ListensForStorageOpportunities.php(65): Laravel\\Telescope\\Telescope::store(Object(Laravel\\Telescope\\Storage\\DatabaseEntriesRepository))
+#12 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#13 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#14 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#15 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#16 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#17 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1177): Illuminate\\Container\\Container->call(Object(Closure))
+#18 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(170): Illuminate\\Foundation\\Application->terminate()
+#19 D:\\xampp81\\htdocs\\food\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->terminate(Object(Symfony\\Component\\Console\\Input\\ArgvInput), 0)
+#20 {main}
+
+[previous exception] [object] (PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'food_server' at D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1169): call_user_func(Object(Closure))
+#6 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(538): Illuminate\\Database\\Connection->getPdo()
+#7 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(752): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('insert into `te...', Array)
+#8 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(719): Illuminate\\Database\\Connection->runQueryCallback('insert into `te...', Array, Object(Closure))
+#9 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(545): Illuminate\\Database\\Connection->run('insert into `te...', Array, Object(Closure))
+#10 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(497): Illuminate\\Database\\Connection->statement('insert into `te...', Array)
+#11 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Query\\Builder.php(3204): Illuminate\\Database\\Connection->insert('insert into `te...', Array)
+#12 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(148): Illuminate\\Database\\Query\\Builder->insert(Array)
+#13 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Collections\\Traits\\EnumeratesValues.php(262): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->Laravel\\Telescope\\Storage\\{closure}(Object(Illuminate\\Support\\Collection), 0)
+#14 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Storage\\DatabaseEntriesRepository.php(149): Illuminate\\Support\\Collection->each(Object(Closure))
+#15 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Telescope.php(663): Laravel\\Telescope\\Storage\\DatabaseEntriesRepository->store(Object(Illuminate\\Support\\Collection))
+#16 [internal function]: Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#17 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Telescope.php(284): call_user_func(Object(Closure))
+#18 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\Telescope.php(674): Laravel\\Telescope\\Telescope::withoutRecording(Object(Closure))
+#19 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\telescope\\src\\ListensForStorageOpportunities.php(65): Laravel\\Telescope\\Telescope::store(Object(Laravel\\Telescope\\Storage\\DatabaseEntriesRepository))
+#20 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Laravel\\Telescope\\Telescope::Laravel\\Telescope\\{closure}()
+#21 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(41): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#22 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#23 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#24 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#25 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1177): Illuminate\\Container\\Container->call(Object(Closure))
+#26 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(170): Illuminate\\Foundation\\Application->terminate()
+#27 D:\\xampp81\\htdocs\\food\\artisan(51): Illuminate\\Foundation\\Console\\Kernel->terminate(Object(Symfony\\Component\\Console\\Input\\ArgvInput), 0)
+#28 {main}
+"} 
+[2023-08-14 09:31:04] local.ERROR: Command "optimise" is not defined.
+
+Did you mean one of these?
+    optimize
+    optimize:clear {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"optimise\" is not defined.
+
+Did you mean one of these?
+    optimize
+    optimize:clear at D:\\xampp81\\htdocs\\food\\vendor\\symfony\\console\\Application.php:692)
+[stacktrace]
+#0 D:\\xampp81\\htdocs\\food\\vendor\\symfony\\console\\Application.php(259): Symfony\\Component\\Console\\Application->find('optimise')
+#1 D:\\xampp81\\htdocs\\food\\vendor\\symfony\\console\\Application.php(171): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(102): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 D:\\xampp81\\htdocs\\food\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(151): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 D:\\xampp81\\htdocs\\food\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
