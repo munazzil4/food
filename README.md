@@ -1,10 +1,10 @@
-## 🚀 Development
+##  Development
 
-Composer and Yarn/NPM package manager are required
+Composer
 
 Via Git
 
--   Fork, then Clone
+- Clone the project
 
 ```bash
 git clone https://github.com/alphaolomi/food.git
